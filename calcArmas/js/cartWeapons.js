@@ -21,22 +21,22 @@ $(document).ready(function() {
 		},
 		{
 			productName: "Munição de Revolver",
-			price: "2.00",
-			photo: "../../product-images/ammo.png"
-		},
-		{
-			productName: "Munição de Pistola",
-			price: "3.00",
-			photo: "../../product-images/ammo.png"
-		},
-		{
-			productName: "Munição de Repetidora",
 			price: "4.00",
 			photo: "../../product-images/ammo.png"
 		},
 		{
+			productName: "Munição de Pistola",
+			price: "4.00",
+			photo: "../../product-images/ammo.png"
+		},
+		{
+			productName: "Munição de Repetidora",
+			price: "7.00",
+			photo: "../../product-images/ammo.png"
+		},
+		{
 			productName: "Munição de Rifle Ferrolho",
-			price: "5.00",
+			price: "7.00",
 			photo: "../../product-images/ammo.png"
 		},
 	];
