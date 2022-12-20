@@ -96,6 +96,7 @@ function showCartTable() {
 	var price = 0;
 	var quantity = 0;
 	var subTotal = 0;
+	var discount = 0;
 
 	if (sessionStorage.getItem('shopping-cart')) {
 		var shoppingCart = JSON.parse(sessionStorage.getItem('shopping-cart'));
@@ -106,7 +107,9 @@ function showCartTable() {
 			var cartItem = JSON.parse(item);
 			price = parseFloat(cartItem.price);
 			quantity = parseInt(cartItem.quantity);
+			discount = parseInt(cartItem.discount)
 			subTotal = price * quantity
+			discount = subTotal - discount
 
 			cartRowHTML += "<tr>" +
 				"<td>" + cartItem.productName + "</td>" +
@@ -132,7 +135,7 @@ function showProductGallery(product) {
 		productHTML += '<div class="product-item">'+
 					'<img src="product-images/' + item.photo + '">'+
 					'<div class="productname">' + item.productName + '</div>'+
-					'<div class="price">$<span>' + item.price + '</span></div>'+
+					'<div class="price">$ <span>' + item.price + '</span></div>'+
 					'<div class="cart-action">'+
 						'<input type="text" class="product-quantity" name="quantity" value="1" size="2" />'+
 						'<input type="submit" value="Adicionar" class="add-to-cart" onClick="addToCart(this)" />'+
