@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>:: JACARÉ STORE :: MINÉRIOS</title>
+	<link href="/css/style.css" type="text/css" rel="stylesheet" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/imgs/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/imgs/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/imgs/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/imgs/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/imgs/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/imgs/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/imgs/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/imgs/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/imgs/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/imgs/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/imgs/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon-16x16.png">
+	<link rel="manifest" href="/imgs/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/imgs/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+	<button class="btn" onclick="history.back()">Voltar a página anterior</button>
+	<div class="container">
+		<div id="shopping-cart">
+			<div class="txt-heading">
+				<img src="/imgs/logo.png" style="width: 15%;">
+				<h1 class="title">JACARÉ STORE :: ARMAS</h1>
+			</div>
+			<a onClick="emptyCart()" class="btnEmpty" id="btnEmpty">Limpar</a>
+			<table class="tbl-cart" cellpadding="10" cellspacing="1">
+				<thead>
+					<tr>
+						<th>Produto</th>
+						<th class='text-right' width="10%">Preço Unitário</th>
+						<th class='text-right' width="5%">Quantidade</th>
+						<th class='text-right' width="10%">Sub Total</th>
+					</tr>
+				</thead>
+				<tbody id="cartTableBody">
+				</tbody>
+				<tfoot>
+					<tr>
+						<td class="text-right">Total:</td>
+						<td id="itemCount" class="text-right" colspan="2"></td>
+						<td id="totalAmount" class="text-right"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+		<!-- Product gallery shell to load HTML from JavaScript code -->
+		<div id="product-grid">
+			<div class="txt-heading">
+				<h1>Armas</h1>
+			</div>
+			<div id="weapons-item-container"></div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="/js/cartWeapons.js"></script>
+</body>
+</html>
