@@ -129,8 +129,8 @@ function showProductGallery(product) {
 		'<tr>'+ 
 		  '<td class="sm-block sm-w-full group hover-cursor-pointer" style="padding-left: 10px; padding-right: 10px; text-align: center; vertical-align: top;" width="33.33333%" align="center" valign="top">' +
 			'<div class="mask transition-all group-hover-bg-size-120" style="background-image: url("product-images/' + item.photo + '")>' +
-				'<img src="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/mask-6.png" width="220" class="sm-w-full" style="position:absolute; border: 0; line-height: 100%; vertical-align: middle;">' +
-				'<img src="product-images/' + item.photo + '" width="220" class="sm-w-full" style="border: 0; line-height: 100%; vertical-align: middle;">' +
+				'<img src="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/mask-6.png" width="150" class="sm-w-full" style="position:absolute; border: 0; line-height: 100%; vertical-align: middle;">' +
+				'<img src="product-images/' + item.photo + '" width="150" class="sm-w-full" style="border: 0; line-height: 100%; vertical-align: middle;">' +
 
 			'</div>' +
 		  '</td>' +
