@@ -110,6 +110,42 @@ function showCartTable() {
 }
 
 
+function showCartTable() {
+	var cartRowHTML = "";
+	var itemCount = 0;
+	var grandTotal = 0;
+	var price = 0;
+	var quantity = 0;
+	var subTotal = 0;
+	var discount = 0;
+
+	if (sessionStorage.getItem('shopping-cart')) {
+		var shoppingCart = JSON.parse(sessionStorage.getItem('shopping-cart'));
+		itemCount = shoppingCart.length;
+		shoppingCart.forEach(function(item) {
+			var cartItem = JSON.parse(item);
+			price = parseFloat(cartItem.price);
+			quantity = parseInt(cartItem.quantity);
+			discount = parseInt(cartItem.discount)
+			subTotal = price * quantity
+			discount = subTotal - discount
+
+			cartRowHTML += "<tr>" +
+				"<td class='text-right'>" + cartItem.productName + "</td>" +
+				"<td class='text-right'>$ " + price.toFixed(2) + "</td>" +
+				"<td class='text-right'>" + quantity + "</td>" +
+				"<td class='text-right'>$ " + subTotal.toFixed(2) + "</td>" +
+				"</tr>";
+
+			grandTotal += subTotal;
+		});
+	}
+	$('#cartTableBody').html(cartRowHTML);
+	$('#itemCount').text(itemCount);
+	$('#totalAmount').text("$" + grandTotal.toFixed(2));
+}
+
+
 function showProductGallery(product) {
 	var productHTML = "";
 	product.forEach(function(item) {

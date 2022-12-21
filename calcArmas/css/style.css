@@ -77,7 +77,13 @@ a {
 
 
 .text-right {
-	text-align: right;
+	width: 30px;
+	text-align: left;
+}
+.text-right-2 {
+	width: 30px;
+	text-align: center;
+	background-color: #a78c6c !important;
 }
 
 #shopping-cart {
@@ -90,7 +96,7 @@ a {
 }
 
 #shopping-cart table {
-	width: 100%;
+	width: 630px;
 	background-color: #645440;
 }
 
@@ -144,8 +150,11 @@ a {
 	border-radius: 2px;
     box-shadow: 0 1px 10px #efe1bd00;
 	font-family: 'chinese_rocksregular';
+	transition: all 0.15s;
+	background: url('https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/cta-bg.png') center no-repeat !important;
 }
-.add-to-cart:hover {
+
+.add-to-cart::selection {
     padding: 5px 10px;
     margin-left: 5px;
     background-color: #c8161e;
@@ -155,6 +164,20 @@ a {
     cursor: pointer;
 	border-radius: 2px;
     box-shadow: 0 1px 10px #efe1bd00;
+	transition: all 0.15s;
+}
+
+.add-to-cart:hover {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #f0313b;
+    border: #c8161e 1px solid;
+    color: #fafafa;
+    text-decoration: none;
+    cursor: pointer;
+	border-radius: 2px;
+    box-shadow: 0 1px 10px #efe1bd00;
+	transition: all 0.15s;
 }
 
 #product-grid .txt-heading {

@@ -15,7 +15,12 @@ $(document).ready(function() {
 			photo: "../../product-images/repetidora.png"
 		},
 		{
-			productName: "Ferrolho",
+			productName: "Rifle Bolt-Action",
+			price: "180.00",
+			photo: "../../product-images/ferrolho.png"
+		},
+		{
+			productName: "Rifle Springfield",
 			price: "180.00",
 			photo: "../../product-images/ferrolho.png"
 		},
@@ -106,10 +111,10 @@ function showCartTable() {
 			discount = subTotal - discount
 
 			cartRowHTML += "<tr>" +
-				"<td>" + cartItem.productName + "</td>" +
-				"<td class='text-right'>$" + price.toFixed(2) + "</td>" +
+				"<td class='text-right'>" + cartItem.productName + "</td>" +
+				"<td class='text-right'>$ " + price.toFixed(2) + "</td>" +
 				"<td class='text-right'>" + quantity + "</td>" +
-				"<td class='text-right'>$" + subTotal.toFixed(2) + "</td>" +
+				"<td class='text-right'>$ " + subTotal.toFixed(2) + "</td>" +
 				"</tr>";
 
 			grandTotal += subTotal;
