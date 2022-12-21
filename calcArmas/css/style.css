@@ -81,11 +81,12 @@ a {
 }
 
 #shopping-cart {
-	margin: 40px;
+	padding: 30px;
 }
 
 #product-grid {
 	margin: 40px;
+	
 }
 
 #shopping-cart table {
@@ -162,13 +163,13 @@ a {
 
 .product-item {
 	float: left;
-	/* background: #efe1bd; */
 	margin: 30px 30px 0px 0px;
-	/* border: #efe1bd 1px solid; */
 	padding: 10px 10px 20px 10px;
     line-height: 30px;
 	border-radius: 15px;
     text-align: center;
+	max-width: 250px;
+	transition: all 0.15s ease-in-out;
 }
 
 
@@ -217,8 +218,17 @@ a {
 .product-quantity {
     padding: 5px 10px;
     border-radius: 3px;
-    border: #E0E0E0 1px solid;
+	font-family: 'chinese_rocksregular';
+	border: none;
+	background-color: #efe1bd;
 }
+
+input:focus {
+
+	border: none;
+	background-color: #efe1bd;
+}
+
 
 .product-tile-footer {
     padding: 15px 15px 0px 15px;
@@ -275,7 +285,7 @@ a {
 	font-weight: 400;
 	text-align: right;
 	width: 100%;
-	font-family: 'chinese_rocksregular'
+	font-family: 'chinese_rocksregular';
   }
   
   .display h2 {

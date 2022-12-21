@@ -124,7 +124,7 @@ function showCartTable() {
 function showProductGallery(product) {
 	var productHTML = "";
 	product.forEach(function(item) {
-		productHTML += '<div class="product-item">'+
+		productHTML += '<div class="product-item transition-all">'+
 		'<div class="sm-w-full" style="color: #ffffff;width="600" cellpadding="0" cellspacing="0" role="presentation">' +
 		'<tr>'+ 
 		  '<td class="sm-block sm-w-full group hover-cursor-pointer" style="padding-left: 10px; padding-right: 10px; text-align: center; vertical-align: top;" width="33.33333%" align="center" valign="top">' +
