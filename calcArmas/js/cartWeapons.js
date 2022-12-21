@@ -78,8 +78,6 @@ function emptyCart() {
 	}
 }
 
-
-
 function removeCartItem(index) {
 	if (sessionStorage.getItem('shopping-cart')) {
 		var shoppingCart = JSON.parse(sessionStorage.getItem('shopping-cart'));
@@ -87,12 +85,10 @@ function removeCartItem(index) {
 		showCartTable();
 	}
 }
-
 function showCartTable() {
 	var cartRowHTML = "";
 	var itemCount = 0;
 	var grandTotal = 0;
-
 	var price = 0;
 	var quantity = 0;
 	var subTotal = 0;
@@ -101,8 +97,6 @@ function showCartTable() {
 	if (sessionStorage.getItem('shopping-cart')) {
 		var shoppingCart = JSON.parse(sessionStorage.getItem('shopping-cart'));
 		itemCount = shoppingCart.length;
-
-		//Iterate javascript shopping cart array
 		shoppingCart.forEach(function(item) {
 			var cartItem = JSON.parse(item);
 			price = parseFloat(cartItem.price);
@@ -121,7 +115,6 @@ function showCartTable() {
 			grandTotal += subTotal;
 		});
 	}
-
 	$('#cartTableBody').html(cartRowHTML);
 	$('#itemCount').text(itemCount);
 	$('#totalAmount').text("$" + grandTotal.toFixed(2));
@@ -129,20 +122,33 @@ function showCartTable() {
 
 
 function showProductGallery(product) {
-	//Iterate javascript shopping cart array
 	var productHTML = "";
 	product.forEach(function(item) {
 		productHTML += '<div class="product-item">'+
-					'<img src="product-images/' + item.photo + '">'+
-					'<div class="productname">' + item.productName + '</div>'+
-					'<div class="price">$ <span>' + item.price + '</span></div>'+
-					'<div class="cart-action">'+
-						'<input type="text" class="product-quantity" name="quantity" value="1" size="2" />'+
-						'<input type="submit" value="Adicionar" class="add-to-cart" onClick="addToCart(this)" />'+
-					'</div>'+
-				'</div>';
-				"<tr>";
+		'<div class="sm-w-full" style="color: #ffffff;width="600" cellpadding="0" cellspacing="0" role="presentation">' +
+		'<tr>'+ 
+		  '<td class="sm-block sm-w-full group hover-cursor-pointer" style="padding-left: 10px; padding-right: 10px; text-align: center; vertical-align: top;" width="33.33333%" align="center" valign="top">' +
+			'<div class="mask transition-all group-hover-bg-size-120" style="background-image: url("product-images/' + item.photo + '")>' +
+				'<img src="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/mask-6.png" width="220" class="sm-w-full" style="position:absolute; border: 0; line-height: 100%; vertical-align: middle;">' +
+				'<img src="product-images/' + item.photo + '" width="220" class="sm-w-full" style="border: 0; line-height: 100%; vertical-align: middle;">' +
+
+			'</div>' +
+		  '</td>' +
+		  '<div class="productname">' + item.productName + '</div>'+
+		  '<div class="price">$ <span>' + item.price + '</span></div>'+
+		  '<div class="cart-action">'+
+		 				'<input type="text" class="product-quantity" name="quantity" value="1" size="2" />'+
+		 				'<input type="submit" value="Adicionar" class="add-to-cart" onClick="addToCart(this)" />'+
+		 			'</div>'+
+		'</tr>' +
+		'<tr>' +
+		  '<td height="32"></td>' +
+		'</tr>' +
+	  '</div>' +
+	  '</div>';
+	  '<tr>'
 		
 	});
 	$('#weapons-item-container').html(productHTML);
 }
+
