@@ -441,4 +441,10 @@ input:focus {
 	flex-direction: column;
 	text-align: center;
   }
+
+  .footer {
+	background-color: #F3F3F3;
+	margin-bottom: 30px;
+    padding-bottom: 0px;
+  }
   
