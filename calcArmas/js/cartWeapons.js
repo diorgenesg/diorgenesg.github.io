@@ -1,6 +1,32 @@
 $(document).ready(function() {
-	var productItem = [{
+	var productItem = [
+		{
+			productName: "Revolver de Vaqueiro",
+			price: "50.00",
+			photo: "../../product-images/revolver.png"
+		},
+		{
+			productName: "Revolver Schofield",
+			price: "60.00",
+			photo: "../../product-images/revolver.png"
+		},
+		{
+			productName: "Revolver Ação Dupla",
+			price: "60.00",
+			photo: "../../product-images/revolver.png"
+		},
+		{
 			productName: "Revolver",
+			price: "70.00",
+			photo: "../../product-images/revolver.png"
+		},
+		{
+			productName: "Revolver Lemat",
+			price: "70.00",
+			photo: "../../product-images/revolver.png"
+		},
+		{
+			productName: "Revolver Marinha",
 			price: "70.00",
 			photo: "../../product-images/revolver.png"
 		},
@@ -10,9 +36,14 @@ $(document).ready(function() {
 			photo: "../../product-images/pistola.png"
 		},
 		{
-			productName: "Repetidora",
+			productName: "Repetidora Evans",
 			price: "130.00",
 			photo: "../../product-images/repetidora.png"
+		},
+		{
+			productName: "Rifle Springfield",
+			price: "150.00",
+			photo: "../../product-images/ferrolho.png"
 		},
 		{
 			productName: "Rifle Bolt-Action",
@@ -20,28 +51,28 @@ $(document).ready(function() {
 			photo: "../../product-images/ferrolho.png"
 		},
 		{
-			productName: "Rifle Springfield",
-			price: "180.00",
-			photo: "../../product-images/ferrolho.png"
-		},
-		{
 			productName: "Munição de Revolver",
-			price: "2.00",
-			photo: "../../product-images/ammo.png"
-		},
-		{
-			productName: "Munição de Pistola",
-			price: "2.00",
-			photo: "../../product-images/ammo.png"
-		},
-		{
-			productName: "Munição de Repetidora",
 			price: "3.00",
 			photo: "../../product-images/ammo.png"
 		},
 		{
+			productName: "Munição de Pistola",
+			price: "3.00",
+			photo: "../../product-images/ammo.png"
+		},
+		{
+			productName: "Munição de Repetidora",
+			price: "6.00",
+			photo: "../../product-images/ammo.png"
+		},
+		{
 			productName: "Munição de Rifle Ferrolho",
-			price: "4.00",
+			price: "6.00",
+			photo: "../../product-images/ammo.png"
+		},
+		{
+			productName: "Munição de Escopeta",
+			price: "7.00",
 			photo: "../../product-images/ammo.png"
 		},
 	];
