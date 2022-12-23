@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var productItem = [
 		{
 			productName: "Revolver de Vaqueiro",
-			price: "50.00",
+			price: "60.00",
 			photo: "../../product-images/revolver.png"
 		},
 		{
