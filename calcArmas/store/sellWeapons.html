@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,119 +9,97 @@
 	<link href="../css/style.css" type="text/css" rel="stylesheet" />
 	<link rel="icon" type="image/x-icon" href="../imgs/logo.png">
 </head>
+
 <body>
 	<div class="container">
 		<div id="shopping-cart">
 			<div class="txt-heading">
 				<img src="../imgs/logo.png" class="logo">
-				<td align="center" class="font-bevan title" style="background-image: url('https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-mask.png'); background-position: 0 -70px; background-repeat: no-repeat; padding-bottom: 12px; padding-top: 64px; color: #ffffff; text-transform: uppercase;" background="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-mask.png"><h2 class="sm-text-2xl" style="line-height: 100%; margin: 0; font-size: 36px;">BLACK SKULL STORE :: ARMAS</h2></td>
-				<a href="/calcArmas/index.html"><h1 class="title">voltar</h1></a>
+				<td align="center" class="font-bevan title"
+					style="background-image: url('https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-mask.png'); background-position: 0 -70px; background-repeat: no-repeat; padding-bottom: 12px; padding-top: 64px; color: #ffffff; text-transform: uppercase;"
+					background="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-mask.png">
+					<h2 class="sm-text-2xl" style="line-height: 100%; margin: 0; font-size: 36px;">BLACK SKULL STORE ::
+						ARMAS</h2>
+				</td>
+				<a href="/calcArmas/index.html">
+					<h1 class="title">voltar</h1>
+				</a>
 			</div>
 			<div class="container calculadora">
-				
-				  <div id="calculator" class="modal">
-					<div class="content">
-						<div class="calculator">
-							<div class="display">
-								<input id="display" placeholder="0" disabled>
-								<h2 id="historia"></h2>
-							</div>
-							<div class="row">
-								<button class="button purple-text" onclick="limpar()">AC</button>
-								<div></div>
-								<div></div>
-								<button class="button gray" onclick="add_operador('/')">/</button>
-							</div>
-							<div class="row">
-								<button class="button" onclick="add_numero(7)">7</button>
-								<button class="button" onclick="add_numero(8)">8</button>
-								<button class="button" onclick="add_numero(9)">9</button>
-								<button class="button gray" onclick="add_operador('*')">*</button>
-							</div>
-							<div class="row">
-								<button class="button" onclick="add_numero(4)">4</button>
-								<button class="button" onclick="add_numero(5)">5</button>
-								<button class="button" onclick="add_numero(6)">6</button>
-								<button class="button gray" onclick="add_operador('-')">-</button>
-							</div>
-							<div class="row">
-								<button class="button" onclick="add_numero(1)">1</button>
-								<button class="button" onclick="add_numero(2)">2</button>
-								<button class="button" onclick="add_numero(3)">3</button>
-								<button class="button gray" onclick="add_operador('+')">+</button>
-							</div>
-							<div class="row">
-								<div></div>
-								<button class="button" onclick="add_numero(0)">0</button>
-								<button class="button" onclick="add_numero('.')">.</button>
-								<button class="button purple" onclick="total()">=</button>
-							</div>
-							<!-- BUTTONS/> -->
-						</div>
-				  
-					  <div class="footer">
-						<a href="#" class="footer-btn-close"> Fechar </a>
-					  </div>
-				  
-					  <a href="#" class="close">&times;</a>
-					</div>
-				  </div>
-				  <div class="wrapper_calculator">
-					<a href="#calculator">Calculadora</a>
-				  </div>
-			<a onClick="emptyCart()" class="btnEmpty" id="btnEmpty">Limpar</a>
-			<table class="tbl-cart" cellpadding="7" cellspacing="1">
-				<thead>
-					<tr>
-						<th>Produto</th>
-						<th class='text-right' width="10%">Preço Unitário</th>
-						<th class='text-right' width="5%">Quantidade</th>
-						<th class='text-right' width="10%">Sub Total</th>
-					</tr>
-				</thead>
-				<tbody id="cartTableBody">
-				</tbody>
-				<tfoot>
-					<tr>
-						<td class="text-right-2">Total</td>
-						<td id="itemCount" class="text-right-2" colspan="2"></td>
-						<td id="totalAmount" class="text-right-2"></td>
-						
-					</tr>
-				</tfoot>
-			</table>
-		</div>
-		<!-- Product gallery shell to load HTML from JavaScript code -->
-		<div id="product-grid">
-			<div class="txt-heading">
-				<h1>Armas</h1>
+				<a onClick="emptyCart()" class="btnEmpty" id="btnEmpty">Limpar</a>
+				<table class="tbl-cart" cellpadding="7" cellspacing="1">
+					<thead>
+						<tr>
+							<th>Produto</th>
+							<th class='text-right' width="10%">Preço Unitário</th>
+							<th class='text-right' width="5%">Quantidade</th>
+							<th class='text-right' width="10%">Sub Total</th>
+						</tr>
+					</thead>
+					<tbody id="cartTableBody">
+					</tbody>
+					<tfoot>
+						<tr>
+							<td class="text-right-2">Total</td>
+							<td id="itemCount" class="text-right-2" colspan="2"></td>
+							<td id="totalAmount" class="text-right-2"></td>
+
+						</tr>
+					</tfoot>
+				</table>
 			</div>
-			<div id="weapons-item-container"></div>
+			<!-- Product gallery shell to load HTML from JavaScript code -->
+			<div id="product-grid">
+				<div class="txt-heading">
+					<h1>Armas</h1>
+				</div>
+				<div id="weapons-item-container"></div>
+			</div>
+
 		</div>
-		 
-	</div>
-	<table style="background: url('https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-red.jpg');" width="100%" bgcolor="#f56565" cellpadding="0" cellspacing="0" role="presentation">
-		<tr>
-		  <td align="center" class="font-bevan" style="background-image: url('https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-mask.png'); background-position: 0 -70px; background-repeat: no-repeat; padding-bottom: 12px; padding-top: 64px; color: #ffffff; text-transform: uppercase;" background="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-mask.png">
-			<h2 class="sm-text-2xl" style="line-height: 100%; margin: 0; font-size: 36px;">BLACK SKULL STORE</h2>
-			<table class="sm-w-full" width="600" cellpadding="0" cellspacing="0" role="presentation">
-			  <tr>
-				<td style="padding-left: 16px; padding-right: 16px; padding-top: 32px; padding-bottom: 32px;">
-				  <div style="background-color: #e53e3e; height: 1px; line-height: 1px;">&zwnj;</div>
+		<table
+			style="background: url('https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-red.jpg');"
+			width="100%" bgcolor="#f56565" cellpadding="0" cellspacing="0" role="presentation">
+			<tr>
+				<td align="center" class="font-bevan"
+					style="background-image: url('https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-mask.png'); background-position: 0 -70px; background-repeat: no-repeat; padding-bottom: 12px; padding-top: 64px; color: #ffffff; text-transform: uppercase;"
+					background="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/pattern-grunge-mask.png">
+					<h2 class="sm-text-2xl" style="line-height: 100%; margin: 0; font-size: 36px;">BLACK SKULL STORE
+					</h2>
+					<table class="sm-w-full" width="600" cellpadding="0" cellspacing="0" role="presentation">
+						<tr>
+							<td
+								style="padding-left: 16px; padding-right: 16px; padding-top: 32px; padding-bottom: 32px;">
+								<div style="background-color: #e53e3e; height: 1px; line-height: 1px;">&zwnj;</div>
+							</td>
+						</tr>
+					</table>
+					<p class="font-oswald"
+						style="margin: 0; margin-bottom: 12px; color: #feb2b2; font-size: 14px; text-transform: none;">
+						Feito com ♥ por studioWipe © Atualizado 28/12/2022 - 16h42</p>
+					<table class="font-oswald" cellpadding="0" cellspacing="0" role="presentation">
+
+					</table>
 				</td>
-			  </tr>
-			</table>
-			<p class="font-oswald" style="margin: 0; margin-bottom: 12px; color: #feb2b2; font-size: 14px; text-transform: none;">Feito com ♥ por studioWipe © Atualizado 20/12/2022 - 18h44</p>
-			<table class="font-oswald" cellpadding="0" cellspacing="0" role="presentation">
-			 
-			</table>
-		  </td>
-		</tr>
-	  </table>
-	
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="../js/cartWeapons.js"></script>
-	<script src="../js/calculator.js"></script>
+			</tr>
+		</table>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="../js/cartWeapons.js"></script>
+		<script src="../js/calculator.js"></script>
+		<script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+			
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			</script>
 
 </body>
+
 </html>

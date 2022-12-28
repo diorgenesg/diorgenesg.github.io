@@ -1,45 +1,54 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	var productItem = [
 		{
 			productName: "Revolver de Vaqueiro",
 			price: "40.00",
-			photo: "../../product-images/revolver.png"
-		},
-		{
-			productName: "Revolver Lemat",
-			price: "100.00",
-			photo: "../../product-images/revolver.png"
+			photo: "../../product-images/revolver.png",
 		},
 		{
 			productName: "Revolver Schofiled",
 			price: "60.00",
-			photo: "../../product-images/revolver.png"
+			photo: "../../product-images/revolver.png",
+			itens: ""
 		},
 		{
 			productName: "Revolver Ação Dupla",
 			price: "60.00",
-			photo: "../../product-images/revolver.png"
+			photo: "../../product-images/revolver.png",
+			itens: ""
+		},
+		{
+			productName: "Revolver Lemat",
+			price: "100.00",
+			photo: "../../product-images/revolver.png",
+			itens: ""
 		},
 		{
 			productName: "Pistola 1899",
 			price: "120.00",
-			photo: "../../product-images/pistola.png"
-		},
-		{
-			productName: "Rifle Ferrolho",
-			price: "150.00",
-			photo: "../../product-images/ferrolho.png"
+			photo: "../../product-images/pistola.png",
+			itens: ""
 		},
 		{
 			productName: "Rifle Springfield",
 			price: "140.00",
-			photo: "../../product-images/repetidora.png"
+			photo: "../../product-images/repetidora.png",
+			itens: ""
 		},
 		{
 			productName: "Repetidora",
 			price: "130.00",
-			photo: "../../product-images/ferrolho.png"
+			photo: "../../product-images/ferrolho.png",
+			itens: ""
 		},
+		{
+			productName: "Rifle Ferrolho",
+			price: "150.00",
+			photo: "../../product-images/ferrolho.png",
+			itens: ""
+		},
+		// FIM ARMAS
+		// MUNIÇÃO
 		{
 			productName: "Munição de Revolver",
 			price: "3.00",
@@ -123,7 +132,7 @@ function showCartTable() {
 	if (sessionStorage.getItem('shopping-cart')) {
 		var shoppingCart = JSON.parse(sessionStorage.getItem('shopping-cart'));
 		itemCount = shoppingCart.length;
-		shoppingCart.forEach(function(item) {
+		shoppingCart.forEach(function (item) {
 			var cartItem = JSON.parse(item);
 			price = parseFloat(cartItem.price);
 			quantity = parseInt(cartItem.quantity);
@@ -149,31 +158,32 @@ function showCartTable() {
 
 function showProductGallery(product) {
 	var productHTML = "";
-	product.forEach(function(item) {
-		productHTML += '<div class="product-item transition-all">'+
-		'<div class="sm-w-full" style="color: #ffffff;width="600" cellpadding="0" cellspacing="0" role="presentation">' +
-		'<tr>'+ 
-		  '<td class="sm-block sm-w-full group hover-cursor-pointer" style="padding-left: 10px; padding-right: 10px; text-align: center; vertical-align: top;" width="33.33333%" align="center" valign="top">' +
+	product.forEach(function (item) {
+		productHTML += '<div class="product-item transition-all">' +
+			'<div class="sm-w-full" style="color: #ffffff;width="600" cellpadding="0" cellspacing="0" role="presentation">' +
+			'<tr>' +
+			'<td class="sm-block sm-w-full group hover-cursor-pointer" style="padding-left: 10px; padding-right: 10px; text-align: center; vertical-align: top;" width="33.33333%" align="center" valign="top">' +
 			'<div class="mask transition-all group-hover-bg-size-120" style="background-image: url("product-images/' + item.photo + '")>' +
-				'<img src="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/mask-6.png" width="150" class="sm-w-full" style="position:absolute; border: 0; line-height: 100%; vertical-align: middle;">' +
-				'<img src="product-images/' + item.photo + '" width="150" class="sm-w-full" style="border: 0; line-height: 100%; vertical-align: middle;">' +
+			'<img src="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/mask-6.png" width="150" class="sm-w-full" style="position:absolute; border: 0; line-height: 100%; vertical-align: middle;">' +
+			'<img src="product-images/' + item.photo + '" width="150" class="sm-w-full" style="border: 0; line-height: 100%; vertical-align: middle;">' +
 
 			'</div>' +
-		  '</td>' +
-		  '<div class="productname">' + item.productName + '</div>'+
-		  '<div class="price">$ <span>' + item.price + '</span></div>'+
-		  '<div class="cart-action">'+
-		 				'<input type="text" class="product-quantity" name="quantity" value="1" size="2" />'+
-		 				'<input type="submit" value="Adicionar" class="add-to-cart" onClick="addToCart(this)" />'+
-		 			'</div>'+
-		'</tr>' +
-		'<tr>' +
-		  '<td height="32"></td>' +
-		'</tr>' +
-	  '</div>' +
-	  '</div>';
-	  '<tr>'
+			'</td>' +
+			'<div class="productname">' + item.productName + '</div>' +
+			'<div class="price">$ <span>' + item.price + '</span></div>' +
 		
+		'<div class="cart-action">' +
+			'<input type="text" class="product-quantity" name="quantity" value="1" size="2" />' +
+			'<input type="submit" value="Adicionar" class="add-to-cart" onClick="addToCart(this)" />' +
+			'</div>' +
+			'</tr>' +
+			'<tr>' +
+			'<td height="32"></td>' +
+			'</tr>' +
+			'</div>' +
+			'</div>';
+		'<tr>'
+
 	});
 	$('#weapons-item-container').html(productHTML);
 }

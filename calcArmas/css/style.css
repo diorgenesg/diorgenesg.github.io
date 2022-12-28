@@ -14,12 +14,12 @@
 }
 
 body {
-	color: #211a1a;
-	font-size: 0.9em;
-	align-items: center;
-	background-color: #000009;
-	font-family: 'chinese_rocksregular';
-	font-size: 23px;
+	color: #211a1a !important;
+	font-size: 0.9em  !important;
+	align-items: center  !important;
+	background-color: #000009  !important;
+	font-family: 'chinese_rocksregular'  !important;
+	font-size: 23px  !important;
 }
 
 body, a {
@@ -450,3 +450,39 @@ input:focus {
     padding-bottom: 0px;
   }
   
+  .modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
