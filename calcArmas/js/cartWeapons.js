@@ -2,11 +2,16 @@ $(document).ready(function() {
 	var productItem = [
 		{
 			productName: "Revolver de Vaqueiro",
-			price: "60.00",
+			price: "40.00",
 			photo: "../../product-images/revolver.png"
 		},
 		{
-			productName: "Revolver Schofield",
+			productName: "Revolver Lemat",
+			price: "100.00",
+			photo: "../../product-images/revolver.png"
+		},
+		{
+			productName: "Revolver Schofiled",
 			price: "60.00",
 			photo: "../../product-images/revolver.png"
 		},
@@ -16,42 +21,27 @@ $(document).ready(function() {
 			photo: "../../product-images/revolver.png"
 		},
 		{
-			productName: "Revolver",
-			price: "70.00",
-			photo: "../../product-images/revolver.png"
-		},
-		{
-			productName: "Revolver Lemat",
-			price: "70.00",
-			photo: "../../product-images/revolver.png"
-		},
-		{
-			productName: "Revolver Marinha",
-			price: "70.00",
-			photo: "../../product-images/revolver.png"
-		},
-		{
-			productName: "Pistola",
-			price: "90.00",
+			productName: "Pistola 1899",
+			price: "120.00",
 			photo: "../../product-images/pistola.png"
 		},
 		{
-			productName: "Repetidora Evans",
-			price: "130.00",
-			photo: "../../product-images/repetidora.png"
-		},
-		{
-			productName: "Rifle Springfield",
+			productName: "Rifle Ferrolho",
 			price: "150.00",
 			photo: "../../product-images/ferrolho.png"
 		},
 		{
-			productName: "Rifle Bolt-Action",
-			price: "180.00",
+			productName: "Rifle Springfield",
+			price: "140.00",
+			photo: "../../product-images/repetidora.png"
+		},
+		{
+			productName: "Repetidora",
+			price: "130.00",
 			photo: "../../product-images/ferrolho.png"
 		},
 		{
-			productName: "Munição de Revolver",
+			productName: "Munição de Escopeta",
 			price: "3.00",
 			photo: "../../product-images/ammo.png"
 		},
