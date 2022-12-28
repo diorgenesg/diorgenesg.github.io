@@ -41,7 +41,7 @@ $(document).ready(function() {
 			photo: "../../product-images/ferrolho.png"
 		},
 		{
-			productName: "Munição de Escopeta",
+			productName: "Munição de Revolver",
 			price: "3.00",
 			photo: "../../product-images/ammo.png"
 		},
