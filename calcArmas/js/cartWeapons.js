@@ -1,6 +1,12 @@
 $(document).ready(function () {
 	var productItem = [
 		{
+			productName: "Pistola 1899",
+			price: "70.00",
+			photo: "../../product-images/pistola.png",
+			itens: ""
+		},
+		{
 			productName: "Revolver de Vaqueiro",
 			price: "40.00",
 			photo: "../../product-images/revolver.png",
@@ -27,12 +33,6 @@ $(document).ready(function () {
 			productName: "Revolver Marinha",
 			price: "100.00",
 			photo: "../../product-images/revolver.png",
-			itens: ""
-		},
-		{
-			productName: "Pistola 1899",
-			price: "120.00",
-			photo: "../../product-images/pistola.png",
 			itens: ""
 		},
 		{
