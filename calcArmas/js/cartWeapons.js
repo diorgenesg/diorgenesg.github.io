@@ -4,81 +4,94 @@ $(document).ready(function () {
 			productName: "Pistola 1899",
 			price: "70.00",
 			photo: "../../product-images/pistola.png",
-			itens: ""
+			quantidade: '1un.',
 		},
 		{
 			productName: "Revolver de Vaqueiro",
 			price: "40.00",
 			photo: "../../product-images/revolver.png",
+			quantidade: '1un.',
 		},
 		{
 			productName: "Revolver Schofiled",
 			price: "60.00",
 			photo: "../../product-images/revolver.png",
-			itens: ""
+			quantidade: '1un.',
+
 		},
 		{
 			productName: "Revolver Ação Dupla",
 			price: "60.00",
 			photo: "../../product-images/revolver.png",
-			itens: ""
+			quantidade: '1un.',
+
 		},
 		{
 			productName: "Revolver Lemat",
 			price: "100.00",
 			photo: "../../product-images/revolver.png",
-			itens: ""
+			quantidade: '1un.',
+
 		},
 		{
 			productName: "Revolver Marinha",
 			price: "100.00",
 			photo: "../../product-images/revolver.png",
-			itens: ""
+			quantidade: '1un.',
+
 		},
 		{
 			productName: "Repetidora Evans",
 			price: "100.00",
 			photo: "../../product-images/ferrolho.png",
-			itens: ""
+			quantidade: '1un.',
+
 		},
 		{
 			productName: "Rifle Springfield",
 			price: "130.00",
 			photo: "../../product-images/repetidora.png",
-			itens: ""
+			quantidade: '1un.',
+
 		},
 		{
 			productName: "Rifle Ferrolho",
 			price: "150.00",
 			photo: "../../product-images/ferrolho.png",
-			itens: ""
+			quantidade: '1un.',
+
 		},
 		// FIM ARMAS
 		// MUNIÇÃO
 		{
 			productName: "Munição de Revolver",
 			price: "3.00",
-			photo: "../../product-images/ammo.png"
+			photo: "../../product-images/ammo.png",
+			quantidade: 'cx. 20un',
 		},
 		{
 			productName: "Munição de Pistola",
 			price: "3.00",
-			photo: "../../product-images/ammo.png"
+			photo: "../../product-images/ammo.png",
+			quantidade: 'cx. 20un',
 		},
 		{
 			productName: "Munição de Repetidora",
 			price: "6.00",
-			photo: "../../product-images/ammo.png"
+			photo: "../../product-images/ammo.png",
+			quantidade: 'cx. 20un',
 		},
 		{
 			productName: "Munição de Rifle Ferrolho",
 			price: "6.00",
-			photo: "../../product-images/ammo.png"
+			photo: "../../product-images/ammo.png",
+			quantidade: 'cx. 20un',
 		},
 		{
 			productName: "Munição de Escopeta",
 			price: "3.00",
-			photo: "../../product-images/ammo.png"
+			photo: "../../product-images/ammo.png",
+			quantidade: 'cx. 5un',
 		},
 	];
 	showProductGallery(productItem);
@@ -176,6 +189,7 @@ function showProductGallery(product) {
 			'</div>' +
 			'</td>' +
 			'<div class="productname">' + item.productName + '</div>' +
+			'<div class="productname">' + item.quantidade + '</div>' +
 			'<div class="price">$ <span>' + item.price + '</span></div>' +
 		
 		'<div class="cart-action">' +

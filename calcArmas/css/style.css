@@ -194,11 +194,21 @@ a {
 }
 
 .productname {
-	font-size: 20px;
+	font-family: 'Oswald', sans-serif !important;
+	word-wrap: break-word;
+	font-size: 21px;
 }
+
 .price {
 	font-family: 'Oswald', sans-serif !important;
-	font-size: 25px;
+	font-size: 21px;
+	margin-bottom: 5px;
+	background-color: #e4141c;
+	padding: 5px;
+	border-radius: 10px;
+	max-width: 100px;
+	margin: auto;
+	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
