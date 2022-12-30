@@ -24,21 +24,27 @@ $(document).ready(function () {
 			itens: ""
 		},
 		{
+			productName: "Revolver Marinha",
+			price: "100.00",
+			photo: "../../product-images/revolver.png",
+			itens: ""
+		},
+		{
 			productName: "Pistola 1899",
 			price: "120.00",
 			photo: "../../product-images/pistola.png",
 			itens: ""
 		},
 		{
-			productName: "Rifle Springfield",
-			price: "140.00",
-			photo: "../../product-images/repetidora.png",
+			productName: "Repetidora Evans",
+			price: "100.00",
+			photo: "../../product-images/ferrolho.png",
 			itens: ""
 		},
 		{
-			productName: "Repetidora",
+			productName: "Rifle Springfield",
 			price: "130.00",
-			photo: "../../product-images/ferrolho.png",
+			photo: "../../product-images/repetidora.png",
 			itens: ""
 		},
 		{
@@ -71,7 +77,7 @@ $(document).ready(function () {
 		},
 		{
 			productName: "Munição de Escopeta",
-			price: "7.00",
+			price: "3.00",
 			photo: "../../product-images/ammo.png"
 		},
 	];
