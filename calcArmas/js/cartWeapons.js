@@ -1,106 +1,16 @@
-$(document).ready(function () {
-	var productItem = [
-		{
-			productName: "Pistola 1899",
-			price: "70.00",
-			photo: "../../product-images/pistola.png",
-			quantidade: '1un.',
-		},
-		{
-			productName: "Revolver de Vaqueiro",
-			price: "40.00",
-			photo: "../../product-images/revolver.png",
-			quantidade: '1un.',
-		},
-		{
-			productName: "Revolver Schofiled",
-			price: "60.00",
-			photo: "../../product-images/revolver.png",
-			quantidade: '1un.',
+$(document).ready(
+	async function () {
+	const requestURL = 'http://149.56.77.89:3001/api/weapons';
+	var request = new Request(requestURL);
+	const response = await fetch(request);
+	var productItem = await response.json();
 
-		},
-		{
-			productName: "Revolver Ação Dupla",
-			price: "60.00",
-			photo: "../../product-images/revolver.png",
-			quantidade: '1un.',
-
-		},
-		{
-			productName: "Revolver Lemat",
-			price: "100.00",
-			photo: "../../product-images/revolver.png",
-			quantidade: '1un.',
-
-		},
-		{
-			productName: "Revolver Marinha",
-			price: "100.00",
-			photo: "../../product-images/revolver.png",
-			quantidade: '1un.',
-
-		},
-		{
-			productName: "Repetidora Evans",
-			price: "100.00",
-			photo: "../../product-images/ferrolho.png",
-			quantidade: '1un.',
-
-		},
-		{
-			productName: "Rifle Springfield",
-			price: "130.00",
-			photo: "../../product-images/repetidora.png",
-			quantidade: '1un.',
-
-		},
-		{
-			productName: "Rifle Ferrolho",
-			price: "150.00",
-			photo: "../../product-images/ferrolho.png",
-			quantidade: '1un.',
-
-		},
-		// FIM ARMAS
-		// MUNIÇÃO
-		{
-			productName: "Munição de Revolver",
-			price: "3.00",
-			photo: "../../product-images/ammo.png",
-			quantidade: 'cx. 20un',
-		},
-		{
-			productName: "Munição de Pistola",
-			price: "3.00",
-			photo: "../../product-images/ammo.png",
-			quantidade: 'cx. 20un',
-		},
-		{
-			productName: "Munição de Repetidora",
-			price: "6.00",
-			photo: "../../product-images/ammo.png",
-			quantidade: 'cx. 20un',
-		},
-		{
-			productName: "Munição de Rifle Ferrolho",
-			price: "6.00",
-			photo: "../../product-images/ammo.png",
-			quantidade: 'cx. 20un',
-		},
-		{
-			productName: "Munição de Escopeta",
-			price: "3.00",
-			photo: "../../product-images/ammo.png",
-			quantidade: 'cx. 5un',
-		},
-	];
 	showProductGallery(productItem);
 	showCartTable();
 });
 
 function addToCart(element) {
 	var productParent = $(element).closest('div.product-item');
-
 	var price = $(productParent).find('.price span').text();
 	var productName = $(productParent).find('.productname').text();
 	var quantity = $(productParent).find('.product-quantity').val();
@@ -111,9 +21,7 @@ function addToCart(element) {
 		quantity: quantity
 	};
 	var cartItemJSON = JSON.stringify(cartItem);
-
 	var cartArray = new Array();
-	// If javascript shopping cart session is not empty
 	if (sessionStorage.getItem('shopping-cart')) {
 		cartArray = JSON.parse(sessionStorage.getItem('shopping-cart'));
 	}
@@ -122,6 +30,7 @@ function addToCart(element) {
 	var cartJSON = JSON.stringify(cartArray);
 	sessionStorage.setItem('shopping-cart', cartJSON);
 	showCartTable();
+	
 }
 
 function emptyCart() {
@@ -146,7 +55,7 @@ function showCartTable() {
 	var price = 0;
 	var quantity = 0;
 	var subTotal = 0;
-	var discount = 0;
+
 
 	if (sessionStorage.getItem('shopping-cart')) {
 		var shoppingCart = JSON.parse(sessionStorage.getItem('shopping-cart'));
@@ -157,7 +66,6 @@ function showCartTable() {
 			quantity = parseInt(cartItem.quantity);
 			discount = parseInt(cartItem.discount)
 			subTotal = price * quantity
-			discount = subTotal - discount
 
 			cartRowHTML += "<tr>" +
 				"<td class='text-right'>" + cartItem.productName + "</td>" +
@@ -172,8 +80,9 @@ function showCartTable() {
 	$('#cartTableBody').html(cartRowHTML);
 	$('#itemCount').text(itemCount);
 	$('#totalAmount').text("$" + grandTotal.toFixed(2));
-}
 
+	
+}
 
 function showProductGallery(product) {
 	var productHTML = "";
@@ -184,15 +93,14 @@ function showProductGallery(product) {
 			'<td class="sm-block sm-w-full group hover-cursor-pointer" style="padding-left: 10px; padding-right: 10px; text-align: center; vertical-align: top;" width="33.33333%" align="center" valign="top">' +
 			'<div class="mask transition-all group-hover-bg-size-120" style="background-image: url("product-images/' + item.photo + '")>' +
 			'<img src="https://res.cloudinary.com/maizzle/image/upload/v1541499909/remix/rdr2/mask-6.png" width="150" class="sm-w-full" style="position:absolute; border: 0; line-height: 100%; vertical-align: middle;">' +
-			'<img src="product-images/' + item.photo + '" width="150" class="sm-w-full" style="border: 0; line-height: 100%; vertical-align: middle;">' +
-
+			'<img src="' + item.photo + '" width="150" class="sm-w-full" style="border: 0; line-height: 100%; vertical-align: middle;">' +
 			'</div>' +
 			'</td>' +
 			'<div class="productname">' + item.productName + '</div>' +
 			'<div class="productname">' + item.quantidade + '</div>' +
 			'<div class="price">$ <span>' + item.price + '</span></div>' +
-		
-		'<div class="cart-action">' +
+
+			'<div class="cart-action">' +
 			'<input type="text" class="product-quantity" name="quantity" value="1" size="2" />' +
 			'<input type="submit" value="Adicionar" class="add-to-cart" onClick="addToCart(this)" />' +
 			'</div>' +
